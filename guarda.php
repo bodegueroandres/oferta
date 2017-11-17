@@ -17,7 +17,7 @@
 	<title>Document</title>
 </head>
 <body>
-
+	<a href="index.php">INICIO</a>
 	<?php 
 
 		$id_sede = $_POST['cbx_estado'];
@@ -30,19 +30,34 @@
 	$resultadoI = $mysqli->query($queryInstitucion);
 	?>
 	<table border="1" class="tablaResultados">
+			
+					<?php
+					$rowM = $resultadoI->fetch_assoc();//
+					foreach ($rowM as $key => $value) {
+						echo "<tr><td>".$key.": <br>".$value."<br></td></tr>" ;
+					}
 		
+	 ?>	
 	</table>
-	<tr>
-	<?php
-		$rowM = $resultadoI->fetch_assoc();//
-		foreach ($rowM as $key => $value) {
-			echo "<td>".$key.": <br>".$value."<br></td>" ;
-		}
-		
-	 ?>
+
+<?php 
+//Ahora registraremos en la base de datos la Consulta para que pueda ser visualizada por los admins
+if ($_POST['usuario']=="" || $_POST['email']=="" ) {
+	$nombreU='anonimo';
+	$emailU='anonimo';
+}else{
 	
-	</tr>
-	
+	$nombreU=$_POST['usuario'];
+	$emailU=$_POST['email'];
+	echo "Usuario :".$nombreU." email: ".$emailU;
+}
+
+//ahora enviamos los datos a la base de datos para que la visualice
+
+$sql = "INSERT INTO datos (id_datos,nombre,email) VALUES(NULL,'$nombreU','$emailU')";
+	$resultado = $mysqli->query($sql);
+ ?>
+
 	
 </body>
 </html>
