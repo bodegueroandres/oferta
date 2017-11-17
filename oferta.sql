@@ -66,6 +66,22 @@ CREATE TABLE `consulta` (
 
 /*Data for the table `consulta` */
 
+/*Table structure for table `datos` */
+
+DROP TABLE IF EXISTS `datos`;
+
+CREATE TABLE `datos` (
+  `id_datos` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `detalle_consulta` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`id_datos`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+/*Data for the table `datos` */
+
+insert  into `datos`(`id_datos`,`nombre`,`email`,`detalle_consulta`) values (3,'anonimo','anonimo',NULL),(4,'anonimo','anonimo',NULL),(5,'anonimo','anonimo',NULL),(6,'Pedro','exequiel_puche@hotmail.com',NULL),(7,'Pedro','exequiel_puche@hotmail.com',NULL);
+
 /*Table structure for table `institucion` */
 
 DROP TABLE IF EXISTS `institucion`;
@@ -101,7 +117,7 @@ CREATE TABLE `sede` (
 
 /*Data for the table `sede` */
 
-insert  into `sede`(`id_sede`,`nombre`) values (1,'Godóy Cruz'),(2,'Capital'),(3,'Las Heras'),(4,'Rodeo del Medio');
+insert  into `sede`(`id_sede`,`nombre`) values (1,'Godoy Cruz'),(2,'Capital'),(3,'Las Heras'),(4,'Rodeo del Medio');
 
 /*Table structure for table `sede_carrera` */
 
