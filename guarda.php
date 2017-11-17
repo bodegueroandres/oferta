@@ -34,7 +34,7 @@
 					<?php
 					$rowM = $resultadoI->fetch_assoc();//
 					foreach ($rowM as $key => $value) {
-						echo "<tr><td>".$key.": <br>".$value."<br></td></tr>" ;
+						echo "<tr><td>".$key.": <br><hr/>".$value."<br></td></tr>" ;
 					}
 		
 	 ?>	
