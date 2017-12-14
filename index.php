@@ -27,6 +27,7 @@
 		</script>
 		<script language="javascript" src="js/oculta.js"></script>
 		<link rel="stylesheet" href="estilos.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	</head>
 	
 	<body>
@@ -47,12 +48,16 @@
 				</header>
 
 				<div class="main">
-						<a href="admins.php">Administrador</a>
-						<a href="index.php">INICIO</a>
+						<a href="index.php" class="myButton">INICIO</a>
+						<br/>
+						<br/>
+						<a href="admins.php" class="myButton">ADMINISTRADOR</a>
+						
 						<br>
 						<br>
 						<form id="combo" name="combo" action="guarda.php" method="POST">
-							<div>Selecciona Sede : <select name="cbx_estado" id="cbx_estado">
+							<div>Selecciona Sede : <br/>		
+							 <select name="cbx_estado" id="cbx_estado">
 								<option value="0">Seleccionar Sede</option>
 								<?php while($row = $resultado->fetch_assoc()) { ?>
 									<option value="<?php echo $row['id_sede']; ?>"><?php echo $row['nombre']; ?></option>
@@ -61,7 +66,8 @@
 							
 							<br />
 							
-							<div>Selecciona Carrera : <select name="cbx_municipio" id="cbx_municipio"></select></div>
+							<div>Selecciona Carrera : <br/>
+							 <select name="cbx_municipio" id="cbx_municipio"></select></div>
 							<br />
 							
 							<!-- Esta parte del formulario se oculta -->
@@ -75,7 +81,7 @@
 									<br>	
 								</div>
 							</div>
-							<input type="submit" id="enviar" name="enviar" value="Consultar" />
+							<input type="submit" id="enviar" name="enviar" value="Consultar" class="myButton" />
 						</form>
 						
 				</div>
