@@ -180,4 +180,27 @@ footer {
 
 	}
 
+.tablaResultados{
+	margin: auto;
+}
+.tabla{
+
+	overflow: scroll;
+	overflow-y: hidden;
+
+}
+.tabla table{
+	width: 400px;
+}
+
+html{
+	min-height: 100%;
+	position: relative;
+
+}
+footer{
+	position: absolute;
+	bottom: 0px;
+
+}
 }

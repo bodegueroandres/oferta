@@ -129,6 +129,12 @@ footer {
 	position:relative;
 	top:1px;
 }
+.tablaResultados{
+	margin: auto; 
+}
+.tabla table{
+	width: 400px;
+}
 
 @media screen and (max-width: 500px){
 
@@ -179,5 +185,25 @@ footer {
 		padding: 10px;
 
 	}
+
+	.tabla{
+	margin: auto;
+	overflow: scroll;
+	overflow-y: hidden;
+	border: 1.5px solid #545454 ;
+	}
+	.tabla table{
+	width: 400px;
+	}
+	.tablaResultados td {
+		background:rgba(0,0,0,0.4);
+		height: 15px;
+		border: 2px solid #545454 ;
+	}
+		.tablaResultados hr {
+		
+		height: 1px;
+	}
+	.tabla
 
 }
